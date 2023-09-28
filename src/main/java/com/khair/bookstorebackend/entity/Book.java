@@ -1,5 +1,6 @@
 package com.khair.bookstorebackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,6 +26,7 @@ public class Book {
     private String author;
     private String isbn;
     private String genre;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date publishDate;
     private int availableCopies;
     private int totalCopies;
